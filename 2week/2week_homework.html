@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Webpage Title -->
+    <title>idea cargo</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+    <!-- style -->
+    <style type="text/css">
+        * {
+            font-family: 'Stylish', sans-serif;
+        }
+
+        .formwrap {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            flex-direction: row;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+    </style>
+    <script>
+        function q1() {
+            let name = $('#input1').val();
+            let qty = ($('#qty'))
+            let add = $('#input2').val();
+            let phone = $('#input3').val();
+
+            if (name == '') {
+                alert("이름을 입력하세요");
+                $("#input1").focus();
+            }
+            else if (dropdownMenuButton = "수량") {
+                alert("수량을 선택하세요");
+                $("qty").focus();
+            }
+            else if (add == '') {
+                alert("주소를 입력하세요");
+                $("#input2").focus();
+            }
+            else if (phone == '') {
+                alert("전화번호를 입력하세요");
+                $("#input3").focus();
+            }
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <div class=formwrap>
+        <div>
+            <img
+                src="https://lh3.googleusercontent.com/proxy/Aat_o48QsnGjy4bz8ccB5zVLpNRxQMCrimPCUw2cLmUA1aE6Ioqv0LmF9TtuaK2kgrEilHeJViQdqiCWo9FbQXjjFBSM6iX6qChkwXRiG_yGeypNt61hUQkton8pVWmg6Pw57H2h2_wQRH2FBtSC">
+        </div>
+        <div class=orderform>
+            <span><h1>아이디어를 팝니다</h1> 가격: 100 USD/개</span>
+            <div class="productinfo" style="font-size: smaller;">고통으로부터 도망가세요!</div><br>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">주문자 이름</span>
+                </div>
+                <input id="input1" type="text" class="form-control" aria-label="Sizing example input">
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    수량
+                </button><br>
+                <div id="qty" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">1</a>
+                    <a class="dropdown-item" href="#">2</a>
+                    <a class="dropdown-item" href="#">3</a>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
+                </div>
+                <input id="input2" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
+                </div>
+                <input id="input3" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+        <button onclick="q1()" type="submit" class="btn btn-primary">주문하기</button>
+    </div>
+
+
+</body>
